@@ -1,3 +1,5 @@
+package com.thoughtworks.iwp.vehicle;
+
 public class Vehicle {
     String vehicleType;
     float price;
