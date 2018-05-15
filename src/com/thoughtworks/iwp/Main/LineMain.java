@@ -1,3 +1,5 @@
+package com.thoughtworks.iwp.Main;
+
 import com.thoughtworks.iwp.geometry.Line;
 
 public class LineMain {

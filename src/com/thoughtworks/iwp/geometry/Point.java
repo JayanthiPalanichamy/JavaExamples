@@ -1,19 +1,19 @@
 package com.thoughtworks.iwp.geometry;
 class Point {
-    private int x;
-    private int y;
+    private int xValue;
+    private int yValue;
 
-    Point(int x, int y) {
-        this.x = x;
-        this.y = y;
+    Point(int xValue, int yValue) {
+        this.xValue = xValue;
+        this.yValue = yValue;
     }
-    double distanceBetweenPoints(Point p)
+    double distanceBetweenPoints(Point point)
     {
-        int xDist = this.x-p.x;
-        int yDist = this.y-p.y;
-        int xSquare = xDist*xDist;
-        int ySquare = yDist*yDist;
-        double distance =  Math.sqrt(xSquare+ySquare);
+        int xDist = this.xValue - point.xValue;
+        int yDist = this.yValue - point.yValue;
+        int xSquare = xDist * xDist;
+        int ySquare = yDist * yDist;
+        double distance =  Math.sqrt(xSquare + ySquare);
         return distance;
     }
 }

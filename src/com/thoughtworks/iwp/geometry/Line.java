@@ -1,13 +1,13 @@
 package com.thoughtworks.iwp.geometry;
 
 public class Line {
-     private Point start;
-     private Point end;
+     private Point startPoint;
+     private Point endPoint;
 
-     public Line(int x1, int y1, int x2, int y2)
+     public Line(int startX, int startY, int endX, int endY)
      {
-         this.start = new Point(x1, y1);
-         this.end = new Point(x2, y2);
+         this.startPoint = new Point(startX, startY);
+         this.endPoint = new Point(endX, endY);
      }
 
     @Override
@@ -15,7 +15,6 @@ public class Line {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Line line = (Line) o;
-        return start.distanceBetweenPoints(end) == line.start.distanceBetweenPoints(end);
+        return startPoint.distanceBetweenPoints(endPoint) == line.startPoint.distanceBetweenPoints(endPoint);
     }
-    
 }
