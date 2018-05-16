@@ -6,8 +6,8 @@ public class Line {
 
      public Line(int startX, int startY, int endX, int endY)
      {
-         this.startPoint = new Point(startX, startY);
-         this.endPoint = new Point(endX, endY);
+         startPoint = new Point(startX, startY);
+         endPoint = new Point(endX, endY);
      }
 
     @Override

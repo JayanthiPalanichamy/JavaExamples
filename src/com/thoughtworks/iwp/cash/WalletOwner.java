@@ -4,25 +4,28 @@ public class WalletOwner {
      private Wallet wallet;
 
      public WalletOwner(double money) {
-         this.wallet = new Wallet(money);
+         wallet = new Wallet(money);
      }
 
-     public void putMoney(double income) {
-         if(income >0) {
-             wallet.addMoney(income);
+     public boolean putMoney(double income) {
+         if(wallet.credit(income)) {
              System.out.println("Successfully added money");
+             return true;
          }
          else {
              System.out.println("Invalid Input");
+             return false;
          }
      }
 
-     public void buyThing(double cost) {
-         if(wallet.spendMoney(cost)) {
+     public boolean buyThing(double cost) {
+         if(wallet.decreaseMoney(cost)) {
              System.out.println("The thing is successfully bought");
+             return true;
          }
          else {
              System.out.println("Not enough money");
+             return false;
          }
      }
 }

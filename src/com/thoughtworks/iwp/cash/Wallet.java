@@ -6,13 +6,19 @@ class Wallet {
         this.money = money;
     }
 
-    void addMoney(double increment) {
-        this.money = this.money + increment;
+    boolean credit(double increment) {
+        if(increment >= 0) {
+            money += increment;
+            return true;
+        }
+        else {
+            return false;
+        }
     }
 
-    boolean spendMoney(double decrement) {
-        if(decrement <= this.money) {
-            this.money = this.money - decrement;
+    boolean decreaseMoney(double decrement) {
+        if(decrement <= money) {
+            money -= decrement;
             return true;
         }
         else {
