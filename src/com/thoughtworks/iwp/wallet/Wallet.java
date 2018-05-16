@@ -1,4 +1,4 @@
-package com.thoughtworks.iwp.cash;
+package com.thoughtworks.iwp.wallet;
 class Wallet {
     private double money;
 
@@ -6,9 +6,9 @@ class Wallet {
         this.money = money;
     }
 
-    boolean credit(double increment) {
-        if(increment >= 0) {
-            money += increment;
+    boolean add(double amount) {
+        if(amount >= 0) {
+            money += amount;
             return true;
         }
         else {
@@ -16,9 +16,9 @@ class Wallet {
         }
     }
 
-    boolean decreaseMoney(double decrement) {
-        if(decrement <= money) {
-            money -= decrement;
+    boolean spend(double amount) {
+        if(amount <= money) {
+            money -= amount;
             return true;
         }
         else {

@@ -1,4 +1,4 @@
-package com.thoughtworks.iwp.cash;
+package com.thoughtworks.iwp.wallet;
 
 public class WalletOwner {
      private Wallet wallet;
@@ -8,7 +8,7 @@ public class WalletOwner {
      }
 
      public boolean putMoney(double income) {
-         if(wallet.credit(income)) {
+         if(wallet.add(income)) {
              System.out.println("Successfully added money");
              return true;
          }
@@ -19,7 +19,7 @@ public class WalletOwner {
      }
 
      public boolean buyThing(double cost) {
-         if(wallet.decreaseMoney(cost)) {
+         if(wallet.spend(cost)) {
              System.out.println("The thing is successfully bought");
              return true;
          }
