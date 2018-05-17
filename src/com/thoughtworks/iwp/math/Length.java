@@ -17,15 +17,15 @@ public class Length implements InchValueOfLength, Comparable {
 
     private int compare(double length1, double length2) {
         if(length1 == length2) {
-            System.out.println("Equal");
+//            System.out.println("Equal");
             return 0;
         }
-        else if(length1 <length2) {
-            System.out.println("First length is less than second length");
+        else if(length1 < length2) {
+//            System.out.println("First length is less than second length");
             return -1;
         }
         else {
-            System.out.println("First length is more than second length");
+//            System.out.println("First length is more than second length");
             return 1;
         }
     }
