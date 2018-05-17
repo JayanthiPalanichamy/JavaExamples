@@ -1,10 +1,12 @@
 package com.thoughtworks.iwp.Money;
 
+import java.util.ArrayList;
 import java.util.Objects;
 
 public class Money implements Comparable{
     double value;
     String currency;
+
 
     public Money(double value, String currency) {
         this.value = value;
@@ -24,5 +26,15 @@ public class Money implements Comparable{
     public int compareTo(Object o) {
         Money money = (Money) o;
         return Double.compare(money.value, value);
+    }
+
+    @Override
+    public int hashCode() {
+
+        return Objects.hash(value, currency);
+    }
+
+    public boolean hashEquals(Money money) {
+        return this.hashCode() == money.hashCode();
     }
 }
