@@ -1,4 +1,4 @@
-package com.thoughtworks.iwp;
+package com.thoughtworks.iwp.Money;
 
 import java.util.Objects;
 

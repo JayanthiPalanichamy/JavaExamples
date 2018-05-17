@@ -1,4 +1,6 @@
-package com.thoughtworks.iwp;
+package com.thoughtworks.iwp.Main;
+
+import com.thoughtworks.iwp.Money.Money;
 
 public class MoneyMain {
     public static void main(String[] args) {
