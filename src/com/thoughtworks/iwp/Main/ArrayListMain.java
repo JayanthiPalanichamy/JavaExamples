@@ -1,6 +1,8 @@
 package com.thoughtworks.iwp.Main;
 
+import java.lang.reflect.Array;
 import java.util.ArrayList;
+import java.util.Arrays;
 
 public class ArrayListMain {
     public static void main(String[] args) {
@@ -12,6 +14,7 @@ public class ArrayListMain {
         }
         System.out.println(arrayList1.equals(arrayList2));
         compare(arrayList1, arrayList2);
+
     }
 
     private static void compare(ArrayList<Integer> arrayList1, ArrayList<Integer> arrayList2) {

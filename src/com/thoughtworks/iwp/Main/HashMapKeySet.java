@@ -14,5 +14,6 @@ public class HashMapKeySet {
                 ) {
             System.out.println(s);
         }
+        System.out.println(hashMap.values());
     }
 }
