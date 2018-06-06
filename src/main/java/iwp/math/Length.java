@@ -1,6 +1,6 @@
 package main.java.iwp.math;
 
-public class Length implements InchValueOfLength, Comparable {
+public class Length implements Comparable {
     protected double lengthValue;
 
     public double convertToInchs() {

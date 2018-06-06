@@ -1,7 +1,9 @@
 package main.java.iwp.math;
 
-public class YardLength extends  Length{
-    public YardLength(double yardValue) throws IllegalArgumentException {
+public class Yard extends  Length{
+    public static final int CONVERSION_FACTOR = 36;
+
+    public Yard(double yardValue) throws IllegalArgumentException {
         if(yardValue < 0) {
             throw new IllegalArgumentException();
         }
@@ -9,6 +11,8 @@ public class YardLength extends  Length{
     }
 
     public double convertToInchs() {
-        return lengthValue * 36;
+        return lengthValue * CONVERSION_FACTOR;
+
+
     }
 }

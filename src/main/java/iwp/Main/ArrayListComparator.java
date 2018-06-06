@@ -1,7 +1,6 @@
 package main.java.iwp.Main;
 
 import java.util.ArrayList;
-import java.util.Collection;
 import java.util.Comparator;
 
 import main.java.iwp.math.*;
@@ -33,20 +32,20 @@ public class ArrayListComparator {
         stringArrayList.sort(Comparator.reverseOrder());
         System.out.println(stringArrayList);
 
-        ArrayList<InchLength> inchLengthArrayList = new ArrayList<>();
-        inchLengthArrayList.add(new InchLength(12));
-        inchLengthArrayList.add(new InchLength(16));
-        inchLengthArrayList.add(new InchLength(8));
-        inchLengthArrayList.sort(Comparator.naturalOrder());
+        ArrayList<Inch> inchArrayList = new ArrayList<>();
+        inchArrayList.add(new Inch(12));
+        inchArrayList.add(new Inch(16));
+        inchArrayList.add(new Inch(8));
+        inchArrayList.sort(Comparator.naturalOrder());
         System.out.println("Ascending order");
-        for (InchLength o: inchLengthArrayList
+        for (Inch o: inchArrayList
              ) {
             System.out.println(o.convertToInchs());
         }
 
-        inchLengthArrayList.sort(Comparator.reverseOrder());
+        inchArrayList.sort(Comparator.reverseOrder());
         System.out.println("Descending order");
-        for (InchLength o: inchLengthArrayList
+        for (Inch o: inchArrayList
                 ) {
             System.out.println(o.convertToInchs());
         }
